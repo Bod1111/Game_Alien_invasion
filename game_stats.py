@@ -32,6 +32,7 @@ class GameStats():
 
     def save_high_score(self):
         """Сохранение рекорда"""
-        with open(self.filename, 'w') as f:
-            json.dump(self.high_score,f)
+        if self.score >= self.high_score:
+            with open(self.filename, 'w') as f:
+                json.dump(self.high_score,f)
 

@@ -52,7 +52,7 @@ class Scoreboard():
         if self.stats.score > self.stats.high_score:
             self.stats.high_score = self.stats.score
             # Сохранение нового рекорда в файл
-            self.ai_game.stats.save_high_score()
+            
             self.prep_high_score()
 
     def prep_level(self):
